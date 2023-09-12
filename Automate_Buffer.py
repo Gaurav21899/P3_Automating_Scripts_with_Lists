@@ -17,7 +17,9 @@ for fc in fc_list:
        buffer_distance = "1000 feet"
     elif shape_type == "Polygon":
        buffer_distance = "600 feet"
+
     output_buffer = fc + "_Buffer"
+
     arcpy.analysis.Buffer(fc, output_buffer, buffer_distance)
 
 print("Process Completed")
